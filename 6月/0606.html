@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // P.153 関数の宣言
+        // function キーワード
+        // sum 関数の名前
+        // val1,val2 仮引数
+        // return 戻り値
+        function sum(val1, val2){
+            return val1 + val2;
+        }
+
+        // 実際に使うとき
+        // 10,20 実引数
+        let result = sum(10,20);
+        console.log(result);
+
+        // P159 関数式
+        // letやconstを使い、関数を作る
+        const minus = function(val1, val2){
+            return val1 - val2;
+        }
+
+        // 上のresultと名前が被るので・・
+        // 関数式の実行（使い方は同じ）
+        let result2 = minus(10, 5);
+
+        console.log(result2);
+
+        // P161 宣言前に実行できる
+        hello();
+
+        function hello(){
+            console.log('こんにちわ')
+        }
+
+        // var の動作例
+        console.log(aaa);
+
+        var aaa = 100;
+
+        // P188 グローバルスコープ
+
+        // P170 コールバック関数
+        // ほかの関数に引数として渡される関数
+
+        // P175 setTimeout（メソッド）
+        // 3000ミリ秒（３秒後）にコールバック関数が動く
+        setTimeout( function(){
+            console.log("こんにちわ");
+        }, 3000);
+
+    </script>
+</body>
+</html>
