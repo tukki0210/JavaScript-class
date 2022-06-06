@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hotDay {
+            color: red;
+        }
+        .hotHotDay {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>今日は暑い</div>
+
+    <script>
+        // id属性を追加する（setAttribute）
+        document.querySelector('div').setAttribute('id','hot')
+        // class属性を追加する
+        document.querySelector('div').setAttribute('class','hotDay')
+
+        // classListでclass属性を追加する
+        document.querySelector('div').classList.add('hotHotDay')
+
+        // 削除するclassを指定する
+        document.querySelector('div').classList.remove('hotHotDay')
+
+        // classが２つ以上でも一気に全部消す
+        document.querySelector('div').removeAttribute('class')
+
+        // p119 
+        // const whichCase = "case1"
+
+        // switch (whichCase) {
+        //     case "case1":
+
+        //     console.log("case1 節を実行しました");
+        //     break;
+
+        //     case "case2":
+
+        //     console.log("case2 節を実行しました");
+        //     break;
+
+        //     default:
+        //         console.log("Default 節を実行しました")       
+        // }
+
+        // p133
+        // for文使うときだけはletを使う
+        // for( let i = 0; i < 3; i++) {
+            // console.log(i)
+        // }
+
+        // 練習問題5.7
+        // for( let i = 0; i < 10; i = i+3) {
+        //     console.log(i)
+        // }
+
+        const fruitArray = ["リンゴ","メロン","みかん"];
+
+        console.log( fruitArray[0]);
+
+        console.log( fruitArray[1]);
+
+        // 配列の上書き（リンゴをバナナに上書きしている）
+        fruitArray[0] = "バナナ";
+
+        // バナナに変わっていることを確認
+        console.log(fruitArray[0]);
+
+        // スイカを追加
+        fruitArray[3] = "スイカ"
+
+        // console.log(fruitArray)
+
+        // 配列の長さを取得
+        // console.log(fruitArray.length)
+
+        // P135 配列の要素に対して10ずつ加算
+        const numArray = [ 10, 20, 30];
+
+        for (let index = 0; index < numArray.length; index++){
+            console.log(index)
+            console.log(numArray)
+            numArray[ index ] = numArray[ index ] + 10;
+            console.log(numArray)
+        }
+
+        // console.log(numArray);
+
+        // p65 下
+        let person = {
+            name: { first: "太郎", last: "独習"},
+            age: 18
+        }
+
+        console.log( person.age );
+    </script>
+</body>
+</html>

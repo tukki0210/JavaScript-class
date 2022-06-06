@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // P136 練習問題5.8
+        const array = [10, 20, 23, 47];
+
+        // 合計値を覚えさせる変数
+        let sum = 0;
+
+        // array.length で配列の長さ（４）が使える
+        for(let i = 0; i < array.length; i++){
+
+            // ループのたびに0になるので間違い
+            // let sum = 0;
+
+            // arrayから１個ずつ取り出す
+            console.log(array[i]);
+
+            // 取り出した値を今あるsumに加える
+            sum = sum + array[i];
+        }
+
+        console.log(sum)
+
+        // P141 for...of文
+        const fruits = ["リンゴ","バナナ","オレンジ"];
+
+        for (const value of fruits) {
+            console.log(value)
+        }
+
+        // const valueの部分は何でもよい
+        for (const aaaaa of fruits) {
+            console.log(aaaaa)
+        }
+
+        // 配列が複数形のときは、単数形が良いかも
+        for (const fruit of fruits) {
+            console.log(fruit)
+        }
+
+        // for of文で練習問題5.8
+        sum = 0;
+        for (const number of array){
+            console.log(number)
+            sum = sum + number
+        }
+
+        console.log(sum)
+    </script>
+</body>
+</html>

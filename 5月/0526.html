@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .moji {
+            color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- ここに新しい要素を追加したい -->
+    <div id="test">
+        <p>テスト</p>
+    </div>
+    <!-- JavaScriptだけで、HTMLが書ける！ -->
+    <script>
+        // <div></div>を作って、newDiv という変数に入れる
+        const newDiv = document.createElement("div");
+        // textContent で文字列を追加
+        newDiv.textContent = "Hello World"
+        // P433 prepend でnewDivをbodyの最初の子要素として追加する
+        // document.getElementById('test').before( newDiv )
+
+        // document.getElementById('test').remove()
+        document.querySelector('p').setAttribute('class',"moji")
+
+    </script>
+</body>
+</html>
