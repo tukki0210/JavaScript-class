@@ -20,17 +20,29 @@ for (let i=0; i<4; i++){
 const seikai = "〇正解"
 const fuseikai = "×不正解"
 
+// 共通部分をまとめるのが関数
+// 関数名は動詞＋名詞でつけることが多い
+const makeFuseikai = function(){
+    this.textContent = fuseikai;
+    this.setAttribute('class','fuseikai');
+}
+
 // クリックイベントが起こったときに動作する部分
 document.getElementById('answerA').addEventListener('click',function(){
     // this.textContent = "不正解"
-    this.textContent = fuseikai;
-    this.setAttribute('class','fuseikai');
+    // this.textContent = fuseikai;
+    // this.setAttribute('class','fuseikai');
+
+    // 関数に置き換える
+    makeFuseikai();
 })
 
 document.getElementById('answerB').addEventListener('click',function(){
     // this.textContent = "不正解"
-    this.textContent = fuseikai
-    this.setAttribute('class','fuseikai')
+    // this.textContent = fuseikai
+    // this.setAttribute('class','fuseikai')
+
+    makeFuseikai();
 })
 
 document.getElementById('answerC').addEventListener('click',function(){
@@ -40,6 +52,8 @@ document.getElementById('answerC').addEventListener('click',function(){
 
 document.getElementById('answerD').addEventListener('click',function(){
     // this.textContent = "不正解"
-    this.textContent = fuseikai
-    this.setAttribute('class','fuseikai')
+    // this.textContent = fuseikai
+    // this.setAttribute('class','fuseikai')
+
+    makeFuseikai();
 })
