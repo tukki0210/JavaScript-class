@@ -25,23 +25,19 @@ const fuseikai = "×不正解"
 
 // 引数idNameを設定して、A,B,Dを当てはめる
 const makeFuseikai = function (idName) {
-
     document.getElementById(idName).addEventListener('click', function () {
-        // this.textContent = "不正解"
         this.textContent = fuseikai;
         this.setAttribute('class', 'fuseikai');
     })
-
 }
 
 const makeSeikai = function (idName) {
     document.getElementById(idName).addEventListener('click', function () {
-        // this.textContent = "正解"
         this.textContent = seikai
     })
-    
 }
 
+// 関数の実行
 makeFuseikai('answerA');
 makeFuseikai('answerB');
 makeSeikai('answerC');
