@@ -10,12 +10,6 @@ for (let i = 0; i < 4; i++) {
     document.getElementById(answerIDs[i]).textContent = answers[i]
 }
 
-// 同じ内容だがデータの形が悪いので扱いにくい
-// const yokunaiArray =['富士山','剣岳','北岳','高山','answerA','answerB','answerC','answerD']
-
-// for (let i=0; i<4; i++){
-//     document.getElementById(yokunaiArray[i]).textContent = yokunaiArray[i + 4]
-// }
 
 const seikai = "〇正解"
 const fuseikai = "×不正解"
@@ -23,6 +17,7 @@ const fuseikai = "×不正解"
 // 共通部分をまとめるのが関数
 // 関数名は動詞＋名詞でつけることが多い
 
+// 不正解だったときの関数
 // 引数idNameを設定して、A,B,Dを当てはめる
 const makeFuseikai = function (idName) {
     document.getElementById(idName).addEventListener('click', function () {
@@ -31,6 +26,7 @@ const makeFuseikai = function (idName) {
     })
 }
 
+// 正解のときの関数
 const makeSeikai = function (idName) {
     document.getElementById(idName).addEventListener('click', function () {
         this.textContent = seikai
@@ -42,28 +38,3 @@ makeFuseikai('answerA');
 makeFuseikai('answerB');
 makeSeikai('answerC');
 makeFuseikai('answerD');
-
-
-// クリックイベントが起こったときに動作する部分
-// document.getElementById('answerA').addEventListener('click', function () {
-//     // this.textContent = "不正解"
-//     this.textContent = fuseikai;
-//     this.setAttribute('class', 'fuseikai');
-// })
-
-// document.getElementById('answerB').addEventListener('click', function () {
-//     // this.textContent = "不正解"
-//     this.textContent = fuseikai
-//     this.setAttribute('class', 'fuseikai')
-// })
-
-document.getElementById('answerC').addEventListener('click', function () {
-    // this.textContent = "正解"
-    this.textContent = seikai
-})
-
-// document.getElementById('answerD').addEventListener('click', function () {
-//     // this.textContent = "不正解"
-//     this.textContent = fuseikai
-//     this.setAttribute('class', 'fuseikai')
-// })
