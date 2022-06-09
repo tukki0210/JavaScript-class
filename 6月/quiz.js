@@ -34,8 +34,17 @@ const makeFuseikai = function (idName) {
 
 }
 
+const makeSeikai = function (idName) {
+    document.getElementById(idName).addEventListener('click', function () {
+        // this.textContent = "正解"
+        this.textContent = seikai
+    })
+    
+}
+
 makeFuseikai('answerA');
 makeFuseikai('answerB');
+makeSeikai('answerC');
 makeFuseikai('answerD');
 
 
