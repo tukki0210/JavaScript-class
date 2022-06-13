@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">
+        ここをクリック
+    </div>
+
+    <script>
+        // 何度も使う部分をまとめる
+        const divA = document.getElementById('a');
+
+        divA.addEventListener('click',function(){
+            // ここでのthisは正しく動く
+            // this.style.backgroundColor = "red";
+            divA.style.backgroundColor = "red"
+
+            setTimeout(function(){
+                console.log('1秒経過');
+                // ここでthisは正しく動いていない
+                // thisはすぐ上のfunctionが呼ばれている物を指す
+                // this.style.backgroundColor = "blue";
+
+                // 結論：thisはなるべく使わないほうがいい（かも）
+                // thisが指していた対象を直接呼ぶ
+                divA.style.backgroundColor = 'blue'
+            },1000)
+        })
+    </script>
+</body>
+</html>
