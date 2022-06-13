@@ -18,23 +18,23 @@ const fuseikai = "×不正解"
 // 関数名は動詞＋名詞でつけることが多い
 
 // 不正解の関数
-const makeFuseikai = (idName) => {
+// const makeFuseikai = (idName) => {
 
-    const fuseikaiEl = document.getElementById(idName);
+//     const fuseikaiEl = document.getElementById(idName);
 
-    fuseikaiEl.addEventListener('click', () => {
-        fuseikaiEl.textContent = fuseikai;
-        fuseikaiEl.setAttribute('class', 'fuseikai');
-    })
-}
+//     fuseikaiEl.addEventListener('click', () => {
+//         fuseikaiEl.textContent = fuseikai;
+//         fuseikaiEl.setAttribute('class', 'fuseikai');
+//     })
+// }
 
 // 正解の関数
-const makeSeikai = function (idName) {
-    document.getElementById(idName).addEventListener('click', function () {
-        this.textContent = seikai;
-        this.setAttribute('class', 'seikai');
-    })
-}
+// const makeSeikai = function (idName) {
+//     document.getElementById(idName).addEventListener('click', function () {
+//         this.textContent = seikai;
+//         this.setAttribute('class', 'seikai');
+//     })
+// }
 
 // 短くできるけど、分かりにくくなるかも
 const makeAnswer = (idName, answer) => {
