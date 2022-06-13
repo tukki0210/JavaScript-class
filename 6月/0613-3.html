@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>この要素の色が変わります</div>
+    <button id="color">文字色の変更</button>
+    <button id="bg-color">背景色の変更</button>
+    <button id="all-color">文字色と背景色の変更</button>
+    <button id="reset-color">リセット</button>
+
+    <script>
+        // 呼び出すHTMLの要素を変数に入れれる
+        const targetEl = document.querySelector("div");
+        const colorBtn = document.querySelector("#color");
+        const bgColorBtn = document.querySelector("#bg-color");
+        const allColorBtn = document.querySelector("#all-color");
+        const resetBtn = document.querySelector("#reset-color");
+
+        // 呼び出す関数も別で定義できる
+        
+        // 文字色を変更するアクション
+        // function colorChange(event){
+        //     targetEl.style.color = "#ff0000";
+        // }
+        const colorChange = (event) => {
+            targetEl.style.color = "#ff0000";
+        }
+        // 背景色を変更するアクション
+        // function bgColorChange(event){
+        //     targetEl.style.backgroundColor = "blue";
+        // }
+        const bgColorChange = (event) => {
+            targetEl.style.backgroundColor = "blue";
+        }
+        // スタイルをリセットするアクション
+        function reset(event){
+            targetEl.style.backgroundColor = "";
+            targetEl.style.color = "";
+        }
+
+        // イベントリスナにアクションを登録
+        // 外部に関数を定義して、それをイベントで呼び出している
+        colorBtn.addEventListener("click",colorChange);
+        bgColorBtn.addEventListener("click", bgColorChange);
+        allColorBtn.addEventListener("click",colorChange);
+        allColorBtn.addEventListener("click",bgColorChange);
+        // スタイルのリセット
+        resetBtn.addEventListener("click",reset);
+    </script>
+</body>
+</html>
