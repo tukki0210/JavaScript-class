@@ -16,6 +16,16 @@
     <script>
         const boxClass = document.getElementsByClassName('box');
         console.log(boxClass);
+        console.log(boxClass[2]);
+        // console.log(boxClass[3].innerHTML);
+
+        for (let i = 0; i<5; i++){
+            console.log(boxClass[i].textContent);
+        }
+
+        const boxClassQuery = document.querySelectorAll('.box');
+        console.log(boxClassQuery)
+        console.log(boxClassQuery[2])
     </script>
 </body>
 </html>
